@@ -1,0 +1,15 @@
+/**
+ *  jQuery Checker 1.0
+ *  Copyright 2011, Stefan Bar | http://stefanbar.com
+ */
+@charset 'utf-8';
+/* CHECKER STYLES */
+.checker, .checker span, .checker input { display: block; height: 19px; margin: 0; padding: 0; outline: none; width: 19px; }
+.checker span { background-color: transparent; background-image: url('checker.gif'); background-position: 0 0; background-repeat: no-repeat; }
+.checker span.checkerChecked { background-position: 0 -57px; }
+.checker.checkerDisabled span { background-position: 0 -114px; }
+.checker.checkerDisabled span.checkerChecked { background-position: 0 -133px; }
+.checker.checkerActive span {  background-position: 0 -19px; }
+.checker.checkerActive span.checkerChecked {  background-position: 0 -76px; }
+.checker.checkerFocus span { background-position: 0 -38px; }
+.checker.checkerFocus span.checkerChecked { background-position: 0 -95px; }
