@@ -1,0 +1,38 @@
+h1. Checker jQuery Plugin
+
+A jQuery plugin that enables you to visually style HTML checkboxes without effecting their default behaviour.
+
+h2. Features
+* Checkboxes are <em>untouched</em> and <em>behave as per normal</em>
+* Tested on <strong><abbr title="Internet Explorer">IE</abbr>7+</strong> and <strong>modern browsers</strong>
+
+h2. Usage
+
+Place the following in your &lt;head&gt; section.
+
+<pre><link rel="stylesheet" type="text/css" href="checker.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.checker.1.0-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	// init checker plugin
+	$("input[type=checkbox]").checker();
+	
+	// checking and disabling the checkboxes via code, the change event must be 
+	// triggered or called to update the visuals
+	$("input[type=checkbox]").attr("disabled", "disabled").change();
+	$("input[type=checkbox]").removeAttr("disabled").trigger("change");
+	$("input[type=checkbox]").attr("enabled", true).change();
+	$("input[type=checkbox]").removeAttr("enabled").trigger("change");
+});
+</script>
+</pre>
+
+h2. Dependencies
+* jQuery 1.4.1+
+* <strong>NOT</strong> jQuery 1.5.0 (Issues with <strong><abbr title="Internet Explorer">IE</abbr>9</strong>)
+
+h2. Change Log
+
+h3. Version 1.0
+* First official release
